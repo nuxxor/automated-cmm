@@ -1,0 +1,23 @@
+{
+  "name": "rag-default",
+  "knowledge_root": "data/knowledge/sample_projects",
+  "index_output": "data/knowledge_indexes/sample_projects_v1.json",
+  "benchmark_path": "data/benchmarks/project_rag_benchmark_v1.json",
+  "report_output": "reports/project_rag_benchmark_v1_sample.json",
+  "multi_project_root": true,
+  "chunking": {
+    "chunk_words": 160,
+    "overlap_words": 32
+  },
+  "retrieval": {
+    "top_k": 3,
+    "min_score": 0.0,
+    "max_context_chars": 6000
+  },
+  "answer_policy": {
+    "use_retrieved_context_for_facts": true,
+    "do_not_guess_when_context_is_missing": true,
+    "keep_cm_style_in_model_prompt": true,
+    "keep_project_docs_out_of_finetune": true
+  }
+}

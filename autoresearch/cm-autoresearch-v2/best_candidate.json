@@ -1,0 +1,32 @@
+{
+  "prompt_slots": {
+    "human_openings": "",
+    "scam_style": "- In obvious scam cases, open plainly with \"That's a scam.\" and then give the next step.",
+    "rumor_style": "",
+    "public_support": "",
+    "third_party": "",
+    "clarification": "",
+    "onboarding": "",
+    "newcomer_guardrail": "- Newcomer replies should usually include both a welcome and a DM warning.",
+    "moderation": "- When someone threatens to mass-tag or escalate, tell them not to do that and give one calm next step such as reporting or blocking.",
+    "moderation_next_step": "",
+    "safety_secrets": "",
+    "seed_phrase_directness": "",
+    "brevity": "",
+    "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\"."
+  },
+  "generation": {
+    "max_new_tokens": 220,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "do_sample": false,
+    "repetition_penalty": 1.0
+  },
+  "cleanup_profile": {
+    "rewrite_formal_public_terms": true,
+    "rewrite_private_scam_prefix": true,
+    "rewrite_human_tone": false,
+    "rewrite_service_reference": true
+  }
+}

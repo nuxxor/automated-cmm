@@ -1,0 +1,396 @@
+{
+  "config_path": "/home/taygun/Masaüstü/automated-cmm/configs/cm_autoresearch_v1.json",
+  "iteration": 90,
+  "best_score": 83.5,
+  "best_signature": "747a5d650ac8",
+  "best_candidate": {
+    "prompt_slots": {
+      "human_openings": "",
+      "scam_style": "",
+      "rumor_style": "",
+      "public_support": "",
+      "third_party": "",
+      "clarification": "",
+      "onboarding": "",
+      "moderation": "",
+      "safety_secrets": "",
+      "brevity": "",
+      "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\"."
+    },
+    "generation": {
+      "max_new_tokens": 220,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "do_sample": false,
+      "repetition_penalty": 1.0
+    },
+    "cleanup_profile": {
+      "rewrite_formal_public_terms": true,
+      "rewrite_private_scam_prefix": true,
+      "rewrite_human_tone": true,
+      "rewrite_service_reference": true
+    }
+  },
+  "leaderboard": [
+    {
+      "signature": "747a5d650ac8",
+      "score": 83.5,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "",
+          "rumor_style": "",
+          "public_support": "",
+          "third_party": "",
+          "clarification": "",
+          "onboarding": "",
+          "moderation": "",
+          "safety_secrets": "",
+          "brevity": "",
+          "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\"."
+        },
+        "generation": {
+          "max_new_tokens": 220,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": true,
+          "rewrite_service_reference": true
+        }
+      }
+    },
+    {
+      "signature": "a93a587efcea",
+      "score": 83.5,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "",
+          "rumor_style": "",
+          "public_support": "",
+          "third_party": "",
+          "clarification": "",
+          "onboarding": "",
+          "moderation": "",
+          "safety_secrets": "",
+          "brevity": "",
+          "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\"."
+        },
+        "generation": {
+          "max_new_tokens": 220,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": false,
+          "rewrite_service_reference": true
+        }
+      }
+    },
+    {
+      "signature": "b6bd5950470f",
+      "score": 83.5,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "",
+          "rumor_style": "",
+          "public_support": "",
+          "third_party": "",
+          "clarification": "",
+          "onboarding": "",
+          "moderation": "",
+          "safety_secrets": "",
+          "brevity": "",
+          "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\"."
+        },
+        "generation": {
+          "max_new_tokens": 220,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": true,
+          "rewrite_service_reference": false
+        }
+      }
+    },
+    {
+      "signature": "9fa4fbdf799c",
+      "score": 83.5,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "",
+          "rumor_style": "",
+          "public_support": "",
+          "third_party": "",
+          "clarification": "",
+          "onboarding": "",
+          "moderation": "",
+          "safety_secrets": "",
+          "brevity": "",
+          "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\"."
+        },
+        "generation": {
+          "max_new_tokens": 96,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": true,
+          "rewrite_service_reference": true
+        }
+      }
+    },
+    {
+      "signature": "bd5e3cb27e1c",
+      "score": 79.3,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "",
+          "rumor_style": "",
+          "public_support": "",
+          "third_party": "",
+          "clarification": "",
+          "onboarding": "",
+          "moderation": "",
+          "safety_secrets": "",
+          "brevity": "",
+          "anti_corporate": ""
+        },
+        "generation": {
+          "max_new_tokens": 220,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": true,
+          "rewrite_service_reference": true
+        }
+      }
+    },
+    {
+      "signature": "700f79c17abf",
+      "score": 77.2,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "",
+          "rumor_style": "",
+          "public_support": "",
+          "third_party": "",
+          "clarification": "",
+          "onboarding": "",
+          "moderation": "",
+          "safety_secrets": "",
+          "brevity": "",
+          "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\"."
+        },
+        "generation": {
+          "max_new_tokens": 220,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": false,
+          "rewrite_human_tone": true,
+          "rewrite_service_reference": true
+        }
+      }
+    },
+    {
+      "signature": "b1b89b9c5ea1",
+      "score": 77.2,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "",
+          "rumor_style": "",
+          "public_support": "",
+          "third_party": "",
+          "clarification": "",
+          "onboarding": "",
+          "moderation": "",
+          "safety_secrets": "",
+          "brevity": "",
+          "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\"."
+        },
+        "generation": {
+          "max_new_tokens": 120,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": false,
+          "rewrite_human_tone": true,
+          "rewrite_service_reference": true
+        }
+      }
+    },
+    {
+      "signature": "25687a390516",
+      "score": 76.25,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "",
+          "rumor_style": "",
+          "public_support": "",
+          "third_party": "",
+          "clarification": "",
+          "onboarding": "",
+          "moderation": "",
+          "safety_secrets": "",
+          "brevity": "",
+          "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\"."
+        },
+        "generation": {
+          "max_new_tokens": 220,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": false,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": true,
+          "rewrite_service_reference": true
+        }
+      }
+    }
+  ],
+  "seen_signatures": [
+    "01016b7bb2e3",
+    "012c65c2bad7",
+    "06f680aff53a",
+    "0da705e05b1e",
+    "1063c3e8ceb1",
+    "1199d5614ce1",
+    "16ede736fa95",
+    "176ee840a4ad",
+    "1810f32a9ad2",
+    "18323665c8fd",
+    "1849bcd23819",
+    "1b2348cf3604",
+    "1bc918fed12d",
+    "1c766b885c24",
+    "1d60fa48ce88",
+    "1e77fa74ee14",
+    "21e361734542",
+    "24144bdc0c93",
+    "246fcdf55d7a",
+    "25687a390516",
+    "257ea7b064bb",
+    "28f38330d4e5",
+    "2b64d601570c",
+    "2cd0f3ce547e",
+    "316036b49af1",
+    "38f0ed94485e",
+    "39153acaf5a7",
+    "425e434c4b9d",
+    "43a51fc76630",
+    "4636c8025c7b",
+    "49208632e50f",
+    "4c5d67cccba5",
+    "522398157287",
+    "5bf40dcf1195",
+    "6042c3dffff8",
+    "607a8a4b4c76",
+    "66c9a52d0f67",
+    "68b1b6017ba9",
+    "690f31b66873",
+    "69bc8d539c6e",
+    "6c832848c592",
+    "6fb2bc49be34",
+    "700f79c17abf",
+    "70c9eee10c1e",
+    "73c2947c8369",
+    "747a5d650ac8",
+    "7508712523ed",
+    "75cb14435210",
+    "796ab648c117",
+    "7b5f3c984b9b",
+    "808240464b38",
+    "8291a3fc155c",
+    "86184134d7bc",
+    "868897424989",
+    "9724a0003314",
+    "99423f84f093",
+    "9fa4fbdf799c",
+    "a3744376dcce",
+    "a4dd86edc311",
+    "a93a587efcea",
+    "ae305408708c",
+    "b1b89b9c5ea1",
+    "b32eeff0976a",
+    "b65dbe441c6f",
+    "b6bd5950470f",
+    "b6c79d0d7d2d",
+    "bd5e3cb27e1c",
+    "c4e008fdcf0b",
+    "ce5bdeaeac6d",
+    "d19b13726037",
+    "dacbaaab1c25",
+    "dbba0db6ce92",
+    "dc2f66b358b3",
+    "deb47b0ebec1",
+    "e2b010f9e0a9",
+    "e5bb32d84c6a",
+    "e87174ad9291",
+    "eae454180cc4",
+    "ecb90be9cd04",
+    "ee5198261dfd",
+    "f0cba6b18346",
+    "f138ee665699",
+    "f1cfc87fb0e4",
+    "f4662c32e7bf",
+    "f499751033a5",
+    "f4fae5ae02a9",
+    "f5f65fdc3eeb",
+    "f7bdb9219036",
+    "fd5edc48ee75",
+    "fdfdb082c2b0",
+    "fe9500db2e71"
+  ],
+  "started_at": 1775650693.0593953,
+  "updated_at": 1775654443.0924954
+}

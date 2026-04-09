@@ -1,0 +1,5591 @@
+{
+  "global": {
+    "min_words": 6,
+    "max_words": 80,
+    "max_sentences": 4,
+    "duplicate_opening_penalty": 0.25,
+    "forbidden_patterns": [
+      "<think>",
+      "\\bofficial resources\\b",
+      "\\bforum(?:s)?\\b",
+      "\\bmodmail\\b",
+      "\\bthe exact steps you took, the exact result, and the exact expected result\\b"
+    ],
+    "exact_phrase_penalties": {
+      "I understand the impulse": 0.6,
+      "I understand that frustration": 0.6,
+      "I'm glad to see you here": 0.4,
+      "the right place to ask": 0.3
+    }
+  },
+  "cases": [
+    {
+      "id": "community_dm_boundary_001",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "Can I DM confused newcomers with onboarding help if I mean well?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with onboarding help"
+      }
+    },
+    {
+      "id": "community_dm_boundary_002",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "Can I DM confused newcomers with the setup steps if I mean well?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the setup steps"
+      }
+    },
+    {
+      "id": "community_dm_boundary_003",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "Can I DM confused newcomers with the FAQ links if I mean well?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the FAQ links"
+      }
+    },
+    {
+      "id": "community_dm_boundary_004",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "Can I DM confused newcomers with a wallet safety checklist if I mean well?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with a wallet safety checklist"
+      }
+    },
+    {
+      "id": "community_dm_boundary_005",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "Can I DM confused newcomers with the right docs if I mean well?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the right docs"
+      }
+    },
+    {
+      "id": "community_dm_boundary_006",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "Can I DM confused newcomers with the staking guide if I mean well?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the staking guide"
+      }
+    },
+    {
+      "id": "community_dm_boundary_007",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "Can I DM confused newcomers with the bridge guide if I mean well?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the bridge guide"
+      }
+    },
+    {
+      "id": "community_dm_boundary_008",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "Can I DM confused newcomers with account setup instructions if I mean well?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with account setup instructions"
+      }
+    },
+    {
+      "id": "community_dm_boundary_009",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "If I see someone lost, can I reach out privately with onboarding help?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with onboarding help"
+      }
+    },
+    {
+      "id": "community_dm_boundary_010",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "If I see someone lost, can I reach out privately with the setup steps?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the setup steps"
+      }
+    },
+    {
+      "id": "community_dm_boundary_011",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "If I see someone lost, can I reach out privately with the FAQ links?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the FAQ links"
+      }
+    },
+    {
+      "id": "community_dm_boundary_012",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "If I see someone lost, can I reach out privately with a wallet safety checklist?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with a wallet safety checklist"
+      }
+    },
+    {
+      "id": "community_dm_boundary_013",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "If I see someone lost, can I reach out privately with the right docs?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the right docs"
+      }
+    },
+    {
+      "id": "community_dm_boundary_014",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "If I see someone lost, can I reach out privately with the staking guide?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the staking guide"
+      }
+    },
+    {
+      "id": "community_dm_boundary_015",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "If I see someone lost, can I reach out privately with the bridge guide?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the bridge guide"
+      }
+    },
+    {
+      "id": "community_dm_boundary_016",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "If I see someone lost, can I reach out privately with account setup instructions?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with account setup instructions"
+      }
+    },
+    {
+      "id": "community_dm_boundary_017",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "I am only trying to help. Is it okay if I message new users directly with onboarding help?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with onboarding help"
+      }
+    },
+    {
+      "id": "community_dm_boundary_018",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "I am only trying to help. Is it okay if I message new users directly with the setup steps?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the setup steps"
+      }
+    },
+    {
+      "id": "community_dm_boundary_019",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "I am only trying to help. Is it okay if I message new users directly with the FAQ links?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the FAQ links"
+      }
+    },
+    {
+      "id": "community_dm_boundary_020",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "I am only trying to help. Is it okay if I message new users directly with a wallet safety checklist?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with a wallet safety checklist"
+      }
+    },
+    {
+      "id": "community_dm_boundary_021",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "I am only trying to help. Is it okay if I message new users directly with the right docs?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the right docs"
+      }
+    },
+    {
+      "id": "community_dm_boundary_022",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "I am only trying to help. Is it okay if I message new users directly with the staking guide?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the staking guide"
+      }
+    },
+    {
+      "id": "community_dm_boundary_023",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "I am only trying to help. Is it okay if I message new users directly with the bridge guide?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with the bridge guide"
+      }
+    },
+    {
+      "id": "community_dm_boundary_024",
+      "family": "community_dm_boundary",
+      "category": "ood_boundary",
+      "message": "I am only trying to help. Is it okay if I message new users directly with account setup instructions?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bdon't DM people\\b",
+            "\\bpublic reply\\b",
+            "\\bpost the same info there\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "why",
+          "weight": 0.7,
+          "patterns": [
+            "\\bscam vector\\b",
+            "\\bscammers use the same move\\b",
+            "\\blooks the same as scam behavior\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "helper_context": "with account setup instructions"
+      }
+    },
+    {
+      "id": "clarification_missing_context_001",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the staking flow is not working, but I do not even have an error message. What do you need from me?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the staking flow"
+      }
+    },
+    {
+      "id": "clarification_missing_context_002",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the bridge form is not working, but I do not even have an error message. What do you need from me?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the bridge form"
+      }
+    },
+    {
+      "id": "clarification_missing_context_003",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the validator setup is not working, but I do not even have an error message. What do you need from me?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the validator setup"
+      }
+    },
+    {
+      "id": "clarification_missing_context_004",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the swap page is not working, but I do not even have an error message. What do you need from me?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the swap page"
+      }
+    },
+    {
+      "id": "clarification_missing_context_005",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the vault deposit screen is not working, but I do not even have an error message. What do you need from me?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the vault deposit screen"
+      }
+    },
+    {
+      "id": "clarification_missing_context_006",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the governance page is not working, but I do not even have an error message. What do you need from me?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the governance page"
+      }
+    },
+    {
+      "id": "clarification_missing_context_007",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the wallet connect flow is not working, but I do not even have an error message. What do you need from me?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the wallet connect flow"
+      }
+    },
+    {
+      "id": "clarification_missing_context_008",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the airdrop checker is not working, but I do not even have an error message. What do you need from me?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the airdrop checker"
+      }
+    },
+    {
+      "id": "clarification_missing_context_009",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "My the staking flow is failing without a useful error. What info should I send so someone can help?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the staking flow"
+      }
+    },
+    {
+      "id": "clarification_missing_context_010",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "My the bridge form is failing without a useful error. What info should I send so someone can help?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the bridge form"
+      }
+    },
+    {
+      "id": "clarification_missing_context_011",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "My the validator setup is failing without a useful error. What info should I send so someone can help?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the validator setup"
+      }
+    },
+    {
+      "id": "clarification_missing_context_012",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "My the swap page is failing without a useful error. What info should I send so someone can help?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the swap page"
+      }
+    },
+    {
+      "id": "clarification_missing_context_013",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "My the vault deposit screen is failing without a useful error. What info should I send so someone can help?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the vault deposit screen"
+      }
+    },
+    {
+      "id": "clarification_missing_context_014",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "My the governance page is failing without a useful error. What info should I send so someone can help?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the governance page"
+      }
+    },
+    {
+      "id": "clarification_missing_context_015",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "My the wallet connect flow is failing without a useful error. What info should I send so someone can help?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the wallet connect flow"
+      }
+    },
+    {
+      "id": "clarification_missing_context_016",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "My the airdrop checker is failing without a useful error. What info should I send so someone can help?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the airdrop checker"
+      }
+    },
+    {
+      "id": "clarification_missing_context_017",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the staking flow is broken, but I do not know what details matter yet. What should I include?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the staking flow"
+      }
+    },
+    {
+      "id": "clarification_missing_context_018",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the bridge form is broken, but I do not know what details matter yet. What should I include?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the bridge form"
+      }
+    },
+    {
+      "id": "clarification_missing_context_019",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the validator setup is broken, but I do not know what details matter yet. What should I include?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the validator setup"
+      }
+    },
+    {
+      "id": "clarification_missing_context_020",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the swap page is broken, but I do not know what details matter yet. What should I include?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the swap page"
+      }
+    },
+    {
+      "id": "clarification_missing_context_021",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the vault deposit screen is broken, but I do not know what details matter yet. What should I include?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the vault deposit screen"
+      }
+    },
+    {
+      "id": "clarification_missing_context_022",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the governance page is broken, but I do not know what details matter yet. What should I include?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the governance page"
+      }
+    },
+    {
+      "id": "clarification_missing_context_023",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the wallet connect flow is broken, but I do not know what details matter yet. What should I include?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the wallet connect flow"
+      }
+    },
+    {
+      "id": "clarification_missing_context_024",
+      "family": "clarification_missing_context",
+      "category": "ood_clarification",
+      "message": "the airdrop checker is broken, but I do not know what details matter yet. What should I include?",
+      "required_groups": [
+        {
+          "label": "what_you_did",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you tried\\b",
+            "\\bwhat you did\\b",
+            "\\bsteps you took\\b",
+            "\\bwalk me through what you did\\b"
+          ]
+        },
+        {
+          "label": "what_happened",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat happened\\b",
+            "\\bwhat it did instead\\b",
+            "\\bwhat you saw\\b"
+          ]
+        },
+        {
+          "label": "what_you_expected",
+          "weight": 0.9,
+          "patterns": [
+            "\\bwhat you expected\\b",
+            "\\bwhat should have happened\\b",
+            "\\bwhat you expected to happen\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "feature_area": "the airdrop checker"
+      }
+    },
+    {
+      "id": "third_party_boundary_001",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "An outside dashboard says my account is unauthorized. Can this community fix that from here?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "dashboard"
+      }
+    },
+    {
+      "id": "third_party_boundary_002",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "An outside portfolio tracker says my account is unauthorized. Can this community fix that from here?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "portfolio tracker"
+      }
+    },
+    {
+      "id": "third_party_boundary_003",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "An outside analytics site says my account is unauthorized. Can this community fix that from here?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "analytics site"
+      }
+    },
+    {
+      "id": "third_party_boundary_004",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "An outside wallet extension says my account is unauthorized. Can this community fix that from here?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "wallet extension"
+      }
+    },
+    {
+      "id": "third_party_boundary_005",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "An outside bridge UI says my account is unauthorized. Can this community fix that from here?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "bridge UI"
+      }
+    },
+    {
+      "id": "third_party_boundary_006",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "An outside exchange page says my account is unauthorized. Can this community fix that from here?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "exchange page"
+      }
+    },
+    {
+      "id": "third_party_boundary_007",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "An outside block explorer says my account is unauthorized. Can this community fix that from here?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "block explorer"
+      }
+    },
+    {
+      "id": "third_party_boundary_008",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "An outside staking dashboard says my account is unauthorized. Can this community fix that from here?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "staking dashboard"
+      }
+    },
+    {
+      "id": "third_party_boundary_009",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "The dashboard shows the wrong status for my wallet. Is that something this server can solve?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "dashboard"
+      }
+    },
+    {
+      "id": "third_party_boundary_010",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "The portfolio tracker shows the wrong status for my wallet. Is that something this server can solve?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "portfolio tracker"
+      }
+    },
+    {
+      "id": "third_party_boundary_011",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "The analytics site shows the wrong status for my wallet. Is that something this server can solve?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "analytics site"
+      }
+    },
+    {
+      "id": "third_party_boundary_012",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "The wallet extension shows the wrong status for my wallet. Is that something this server can solve?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "wallet extension"
+      }
+    },
+    {
+      "id": "third_party_boundary_013",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "The bridge UI shows the wrong status for my wallet. Is that something this server can solve?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "bridge UI"
+      }
+    },
+    {
+      "id": "third_party_boundary_014",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "The exchange page shows the wrong status for my wallet. Is that something this server can solve?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "exchange page"
+      }
+    },
+    {
+      "id": "third_party_boundary_015",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "The block explorer shows the wrong status for my wallet. Is that something this server can solve?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "block explorer"
+      }
+    },
+    {
+      "id": "third_party_boundary_016",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "The staking dashboard shows the wrong status for my wallet. Is that something this server can solve?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "staking dashboard"
+      }
+    },
+    {
+      "id": "third_party_boundary_017",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "A third-party dashboard is failing. Should I ask here or go to them directly?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "dashboard"
+      }
+    },
+    {
+      "id": "third_party_boundary_018",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "A third-party portfolio tracker is failing. Should I ask here or go to them directly?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "portfolio tracker"
+      }
+    },
+    {
+      "id": "third_party_boundary_019",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "A third-party analytics site is failing. Should I ask here or go to them directly?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "analytics site"
+      }
+    },
+    {
+      "id": "third_party_boundary_020",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "A third-party wallet extension is failing. Should I ask here or go to them directly?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "wallet extension"
+      }
+    },
+    {
+      "id": "third_party_boundary_021",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "A third-party bridge UI is failing. Should I ask here or go to them directly?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "bridge UI"
+      }
+    },
+    {
+      "id": "third_party_boundary_022",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "A third-party exchange page is failing. Should I ask here or go to them directly?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "exchange page"
+      }
+    },
+    {
+      "id": "third_party_boundary_023",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "A third-party block explorer is failing. Should I ask here or go to them directly?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "block explorer"
+      }
+    },
+    {
+      "id": "third_party_boundary_024",
+      "family": "third_party_boundary",
+      "category": "ood_boundary",
+      "message": "A third-party staking dashboard is failing. Should I ask here or go to them directly?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\boutside service\\b",
+            "\\btheir side\\b",
+            "\\bnot something this community can fix directly\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\breach out to them directly\\b",
+            "\\byou'll need to contact them\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [
+        "\\bthe right place to ask\\b"
+      ],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "staking dashboard"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_001",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One dashboard says APY is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "dashboard",
+        "metric": "APY"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_002",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One dashboard says rewards per day is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "dashboard",
+        "metric": "rewards per day"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_003",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One dashboard says staking APR is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "dashboard",
+        "metric": "staking APR"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_004",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One dashboard says validator score is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "dashboard",
+        "metric": "validator score"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_005",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One dashboard says points total is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "dashboard",
+        "metric": "points total"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_006",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One dashboard says vault emissions is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "dashboard",
+        "metric": "vault emissions"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_007",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One portfolio tracker says APY is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "portfolio tracker",
+        "metric": "APY"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_008",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One portfolio tracker says rewards per day is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "portfolio tracker",
+        "metric": "rewards per day"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_009",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One portfolio tracker says staking APR is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "portfolio tracker",
+        "metric": "staking APR"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_010",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One portfolio tracker says validator score is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "portfolio tracker",
+        "metric": "validator score"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_011",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One portfolio tracker says points total is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "portfolio tracker",
+        "metric": "points total"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_012",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One portfolio tracker says vault emissions is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "portfolio tracker",
+        "metric": "vault emissions"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_013",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One analytics site says APY is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "analytics site",
+        "metric": "APY"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_014",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One analytics site says rewards per day is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "analytics site",
+        "metric": "rewards per day"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_015",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One analytics site says staking APR is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "analytics site",
+        "metric": "staking APR"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_016",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One analytics site says validator score is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "analytics site",
+        "metric": "validator score"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_017",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One analytics site says points total is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "analytics site",
+        "metric": "points total"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_018",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One analytics site says vault emissions is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "analytics site",
+        "metric": "vault emissions"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_019",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One wallet extension says APY is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "wallet extension",
+        "metric": "APY"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_020",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One wallet extension says rewards per day is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "wallet extension",
+        "metric": "rewards per day"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_021",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One wallet extension says staking APR is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "wallet extension",
+        "metric": "staking APR"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_022",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One wallet extension says validator score is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "wallet extension",
+        "metric": "validator score"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_023",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One wallet extension says points total is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "wallet extension",
+        "metric": "points total"
+      }
+    },
+    {
+      "id": "dashboard_metric_mismatch_024",
+      "family": "dashboard_metric_mismatch",
+      "category": "ood_faq",
+      "message": "One wallet extension says vault emissions is zero but another shows a daily number. Where do I get the reliable number?",
+      "required_groups": [
+        {
+          "label": "docs_first",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdocs\\b",
+            "\\bemissions section\\b",
+            "\\bdocumentation\\b"
+          ]
+        },
+        {
+          "label": "numbers_can_differ",
+          "weight": 1.0,
+          "patterns": [
+            "\\bdifferent things\\b",
+            "\\bdifferent metrics\\b",
+            "\\bmeasuring different things\\b",
+            "\\bnot the same thing\\b"
+          ]
+        },
+        {
+          "label": "clarify_metric",
+          "weight": 0.7,
+          "patterns": [
+            "\\bwhich number you actually need\\b",
+            "\\bwhich metric you mean\\b",
+            "\\bwhat you are trying to compare\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "outsider_tool": "wallet extension",
+        "metric": "vault emissions"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_001",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My staking issue is stuck on dashboard. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "staking issue",
+        "outsider_tool": "dashboard"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_002",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My staking issue is stuck on portfolio tracker. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "staking issue",
+        "outsider_tool": "portfolio tracker"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_003",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My staking issue is stuck on analytics site. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "staking issue",
+        "outsider_tool": "analytics site"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_004",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My staking issue is stuck on wallet extension. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "staking issue",
+        "outsider_tool": "wallet extension"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_005",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My staking issue is stuck on bridge UI. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "staking issue",
+        "outsider_tool": "bridge UI"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_006",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My staking issue is stuck on exchange page. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "staking issue",
+        "outsider_tool": "exchange page"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_007",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My staking issue is stuck on block explorer. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "staking issue",
+        "outsider_tool": "block explorer"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_008",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My staking issue is stuck on staking dashboard. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "staking issue",
+        "outsider_tool": "staking dashboard"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_009",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My bridge issue is stuck on dashboard. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "bridge issue",
+        "outsider_tool": "dashboard"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_010",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My bridge issue is stuck on portfolio tracker. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "bridge issue",
+        "outsider_tool": "portfolio tracker"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_011",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My bridge issue is stuck on analytics site. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "bridge issue",
+        "outsider_tool": "analytics site"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_012",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My bridge issue is stuck on wallet extension. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "bridge issue",
+        "outsider_tool": "wallet extension"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_013",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My bridge issue is stuck on bridge UI. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "bridge issue",
+        "outsider_tool": "bridge UI"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_014",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My bridge issue is stuck on exchange page. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "bridge issue",
+        "outsider_tool": "exchange page"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_015",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My bridge issue is stuck on block explorer. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "bridge issue",
+        "outsider_tool": "block explorer"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_016",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My bridge issue is stuck on staking dashboard. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "bridge issue",
+        "outsider_tool": "staking dashboard"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_017",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My wallet sync issue is stuck on dashboard. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "wallet sync issue",
+        "outsider_tool": "dashboard"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_018",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My wallet sync issue is stuck on portfolio tracker. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "wallet sync issue",
+        "outsider_tool": "portfolio tracker"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_019",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My wallet sync issue is stuck on analytics site. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "wallet sync issue",
+        "outsider_tool": "analytics site"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_020",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My wallet sync issue is stuck on wallet extension. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "wallet sync issue",
+        "outsider_tool": "wallet extension"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_021",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My wallet sync issue is stuck on bridge UI. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "wallet sync issue",
+        "outsider_tool": "bridge UI"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_022",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My wallet sync issue is stuck on exchange page. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "wallet sync issue",
+        "outsider_tool": "exchange page"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_023",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My wallet sync issue is stuck on block explorer. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "wallet sync issue",
+        "outsider_tool": "block explorer"
+      }
+    },
+    {
+      "id": "exchange_bridge_issue_024",
+      "family": "exchange_bridge_issue",
+      "category": "ood_boundary",
+      "message": "My wallet sync issue is stuck on staking dashboard. Can this community fix that or do I need to go to them?",
+      "required_groups": [
+        {
+          "label": "ownership_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\btheir side\\b",
+            "\\boutside service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them\\b",
+            "\\btheir support\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "issue_type": "wallet sync issue",
+        "outsider_tool": "staking dashboard"
+      }
+    },
+    {
+      "id": "ecosystem_directory_001",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this Layer 2 rollup?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this Layer 2 rollup"
+      }
+    },
+    {
+      "id": "ecosystem_directory_002",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this restaking network?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this restaking network"
+      }
+    },
+    {
+      "id": "ecosystem_directory_003",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this DeFi lending protocol?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this DeFi lending protocol"
+      }
+    },
+    {
+      "id": "ecosystem_directory_004",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this perpetuals exchange?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this perpetuals exchange"
+      }
+    },
+    {
+      "id": "ecosystem_directory_005",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this bridge?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this bridge"
+      }
+    },
+    {
+      "id": "ecosystem_directory_006",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this staking app?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this staking app"
+      }
+    },
+    {
+      "id": "ecosystem_directory_007",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this governance token community?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this governance token community"
+      }
+    },
+    {
+      "id": "ecosystem_directory_008",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this validator network?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this validator network"
+      }
+    },
+    {
+      "id": "ecosystem_directory_009",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this liquid staking protocol?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this liquid staking protocol"
+      }
+    },
+    {
+      "id": "ecosystem_directory_010",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this launchpad?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this launchpad"
+      }
+    },
+    {
+      "id": "ecosystem_directory_011",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this onchain game economy?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this onchain game economy"
+      }
+    },
+    {
+      "id": "ecosystem_directory_012",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Is there one central page that lists every app built around this cross-chain wallet app?",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this cross-chain wallet app"
+      }
+    },
+    {
+      "id": "ecosystem_directory_013",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this Layer 2 rollup? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this Layer 2 rollup"
+      }
+    },
+    {
+      "id": "ecosystem_directory_014",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this restaking network? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this restaking network"
+      }
+    },
+    {
+      "id": "ecosystem_directory_015",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this DeFi lending protocol? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this DeFi lending protocol"
+      }
+    },
+    {
+      "id": "ecosystem_directory_016",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this perpetuals exchange? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this perpetuals exchange"
+      }
+    },
+    {
+      "id": "ecosystem_directory_017",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this bridge? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this bridge"
+      }
+    },
+    {
+      "id": "ecosystem_directory_018",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this staking app? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this staking app"
+      }
+    },
+    {
+      "id": "ecosystem_directory_019",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this governance token community? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this governance token community"
+      }
+    },
+    {
+      "id": "ecosystem_directory_020",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this validator network? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this validator network"
+      }
+    },
+    {
+      "id": "ecosystem_directory_021",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this liquid staking protocol? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this liquid staking protocol"
+      }
+    },
+    {
+      "id": "ecosystem_directory_022",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this launchpad? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this launchpad"
+      }
+    },
+    {
+      "id": "ecosystem_directory_023",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this onchain game economy? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this onchain game economy"
+      }
+    },
+    {
+      "id": "ecosystem_directory_024",
+      "family": "ecosystem_directory",
+      "category": "ood_technical_adjacent",
+      "message": "Can you send me the ecosystems page link for this cross-chain wallet app? I just want one place that lists everything.",
+      "required_groups": [
+        {
+          "label": "no_single_directory",
+          "weight": 1.1,
+          "patterns": [
+            "\\bno central directory\\b",
+            "\\bthere isn't one central directory\\b",
+            "\\bthere usually isn't one central directory\\b"
+          ]
+        },
+        {
+          "label": "staleness",
+          "weight": 0.9,
+          "patterns": [
+            "\\bgoes out of date\\b",
+            "\\bconstantly changing\\b",
+            "\\bnot fully up to date\\b",
+            "\\bpiece it together\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [],
+      "forbidden_patterns": [],
+      "max_sentences": null,
+      "expects_question": null,
+      "disallow_question": null,
+      "slots": {
+        "project_label": "this cross-chain wallet app"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "onboarding",
+    "message": "I just joined this technical community. What is the safest way to get started without getting misled?"
+  },
+  {
+    "id": "scam",
+    "message": "Someone claiming to be support sent me a DM with a verification link and said they can help faster in private. Safe or scam?"
+  },
+  {
+    "id": "community_guidance",
+    "message": "Can I privately message confused newcomers with onboarding tips if I mean well?"
+  },
+  {
+    "id": "rumor",
+    "message": "Where should I check before I believe a rumor about a new feature or outage?"
+  },
+  {
+    "id": "deescalation",
+    "message": "Nobody answered me for hours. This place is useless."
+  },
+  {
+    "id": "moderation",
+    "message": "If nobody deals with this scammer right now, I am going to mass-tag everyone until someone does something."
+  },
+  {
+    "id": "clarification",
+    "message": "The feature is not working, but I do not even have an error message. What do you need from me?"
+  },
+  {
+    "id": "third_party",
+    "message": "An outside dashboard says my account is unauthorized. Can this community fix that from here?"
+  },
+  {
+    "id": "angry",
+    "message": "I followed the instructions and still got nowhere. I am getting pretty fed up at this point."
+  }
+]

@@ -1,0 +1,265 @@
+{
+  "config_path": "/home/taygun/Masaüstü/automated-cmm/configs/cm_autoresearch_v3.json",
+  "iteration": 4,
+  "best_score": 89.85,
+  "best_signature": "111762ed59cb",
+  "best_candidate": {
+    "prompt_slots": {
+      "human_openings": "",
+      "scam_style": "- In obvious scam cases, open plainly with \"That's a scam.\" and then give the next step.",
+      "rumor_style": "",
+      "rumor_confirmation": "",
+      "public_support": "",
+      "public_boundary": "",
+      "third_party": "",
+      "clarification": "",
+      "newcomer_guardrail": "- Newcomer replies should usually include both a welcome and a DM warning.",
+      "newcomer_welcome": "",
+      "moderation": "- When someone threatens to mass-tag or escalate, tell them not to do that and give one calm next step such as reporting or blocking.",
+      "safety_secrets": "",
+      "seed_phrase_directness": "",
+      "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\".",
+      "onboarding": "",
+      "moderation_next_step": "",
+      "brevity": ""
+    },
+    "generation": {
+      "max_new_tokens": 220,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "do_sample": false,
+      "repetition_penalty": 1.0
+    },
+    "cleanup_profile": {
+      "rewrite_formal_public_terms": true,
+      "rewrite_private_scam_prefix": true,
+      "rewrite_human_tone": false,
+      "rewrite_service_reference": true,
+      "rewrite_rumor_confirmation": false,
+      "rewrite_public_boundary": false,
+      "rewrite_seed_phrase_directness": false
+    }
+  },
+  "leaderboard": [
+    {
+      "signature": "111762ed59cb",
+      "score": 89.85,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "- In obvious scam cases, open plainly with \"That's a scam.\" and then give the next step.",
+          "rumor_style": "",
+          "rumor_confirmation": "",
+          "public_support": "",
+          "public_boundary": "",
+          "third_party": "",
+          "clarification": "",
+          "newcomer_guardrail": "- Newcomer replies should usually include both a welcome and a DM warning.",
+          "newcomer_welcome": "",
+          "moderation": "- When someone threatens to mass-tag or escalate, tell them not to do that and give one calm next step such as reporting or blocking.",
+          "safety_secrets": "",
+          "seed_phrase_directness": "",
+          "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\".",
+          "onboarding": "",
+          "moderation_next_step": "",
+          "brevity": ""
+        },
+        "generation": {
+          "max_new_tokens": 220,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": false,
+          "rewrite_service_reference": true,
+          "rewrite_rumor_confirmation": false,
+          "rewrite_public_boundary": false,
+          "rewrite_seed_phrase_directness": false
+        }
+      }
+    },
+    {
+      "signature": "a6ecee29df1e",
+      "score": 79.15,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "- In obvious scam cases, open plainly with \"That's a scam.\" and then give the next step.",
+          "rumor_style": "",
+          "rumor_confirmation": "",
+          "public_support": "",
+          "public_boundary": "",
+          "third_party": "- For third-party issues, say the boundary plainly and redirect them back to that service.",
+          "clarification": "",
+          "newcomer_guardrail": "- Newcomer replies should usually include both a welcome and a DM warning.",
+          "newcomer_welcome": "",
+          "moderation": "- When someone threatens to mass-tag or escalate, tell them not to do that and give one calm next step such as reporting or blocking.",
+          "safety_secrets": "",
+          "seed_phrase_directness": "",
+          "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\".",
+          "onboarding": "",
+          "moderation_next_step": "",
+          "brevity": ""
+        },
+        "generation": {
+          "max_new_tokens": 220,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": false,
+          "rewrite_service_reference": true,
+          "rewrite_rumor_confirmation": false,
+          "rewrite_public_boundary": false,
+          "rewrite_seed_phrase_directness": false
+        }
+      }
+    },
+    {
+      "signature": "347d8cfad034",
+      "score": 65.25,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "- In obvious scam cases, open plainly with \"That's a scam.\" and then give the next step.",
+          "rumor_style": "",
+          "rumor_confirmation": "- For rumors, use direct wording like \"If it isn't there, don't treat it as confirmed.\"",
+          "public_support": "",
+          "public_boundary": "- For private-help boundaries, prefer the exact short phrase \"Keep it public.\" when it fits.",
+          "third_party": "- For third-party issues, say the boundary plainly and redirect them back to that service.",
+          "clarification": "",
+          "newcomer_guardrail": "",
+          "newcomer_welcome": "",
+          "moderation": "- When someone threatens to mass-tag or escalate, tell them not to do that and give one calm next step such as reporting or blocking.",
+          "safety_secrets": "",
+          "seed_phrase_directness": "",
+          "anti_corporate": "",
+          "onboarding": "",
+          "moderation_next_step": "",
+          "brevity": ""
+        },
+        "generation": {
+          "max_new_tokens": 160,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": false,
+          "rewrite_service_reference": true,
+          "rewrite_rumor_confirmation": false,
+          "rewrite_public_boundary": false,
+          "rewrite_seed_phrase_directness": false
+        }
+      }
+    },
+    {
+      "signature": "af91681635ac",
+      "score": 63.35,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "- In obvious scam cases, open plainly with \"That's a scam.\" and then give the next step.",
+          "rumor_style": "",
+          "rumor_confirmation": "",
+          "public_support": "",
+          "public_boundary": "",
+          "third_party": "- For third-party issues, say the boundary plainly and redirect them back to that service.",
+          "clarification": "",
+          "newcomer_guardrail": "",
+          "newcomer_welcome": "",
+          "moderation": "- When someone threatens to mass-tag or escalate, tell them not to do that and give one calm next step such as reporting or blocking.",
+          "safety_secrets": "",
+          "seed_phrase_directness": "- If a user mentions a seed phrase or recovery phrase, explicitly say \"That's a scam\" and \"never share it.\"",
+          "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\".",
+          "onboarding": "",
+          "moderation_next_step": "",
+          "brevity": ""
+        },
+        "generation": {
+          "max_new_tokens": 220,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": false,
+          "rewrite_service_reference": true,
+          "rewrite_rumor_confirmation": false,
+          "rewrite_public_boundary": false,
+          "rewrite_seed_phrase_directness": false
+        }
+      }
+    },
+    {
+      "signature": "6c3a345f3119",
+      "score": 58.9,
+      "candidate": {
+        "prompt_slots": {
+          "human_openings": "",
+          "scam_style": "- In obvious scam cases, open plainly with \"That's a scam.\" and then give the next step.",
+          "rumor_style": "",
+          "rumor_confirmation": "- For rumors, use direct wording like \"If it isn't there, don't treat it as confirmed.\"",
+          "public_support": "",
+          "public_boundary": "- For private-help boundaries, prefer the exact short phrase \"Keep it public.\" when it fits.",
+          "third_party": "",
+          "clarification": "",
+          "newcomer_guardrail": "- Newcomer replies should usually include both a welcome and a DM warning.",
+          "newcomer_welcome": "",
+          "moderation": "- When someone threatens to mass-tag or escalate, tell them not to do that and give one calm next step such as reporting or blocking.",
+          "safety_secrets": "",
+          "seed_phrase_directness": "",
+          "anti_corporate": "",
+          "onboarding": "",
+          "moderation_next_step": "",
+          "brevity": ""
+        },
+        "generation": {
+          "max_new_tokens": 220,
+          "temperature": 0.6,
+          "top_p": 0.95,
+          "top_k": 20,
+          "do_sample": false,
+          "repetition_penalty": 1.0
+        },
+        "cleanup_profile": {
+          "rewrite_formal_public_terms": true,
+          "rewrite_private_scam_prefix": true,
+          "rewrite_human_tone": false,
+          "rewrite_service_reference": true,
+          "rewrite_rumor_confirmation": false,
+          "rewrite_public_boundary": false,
+          "rewrite_seed_phrase_directness": false
+        }
+      }
+    }
+  ],
+  "seen_signatures": [
+    "111762ed59cb",
+    "347d8cfad034",
+    "6c3a345f3119",
+    "a6ecee29df1e",
+    "af91681635ac"
+  ],
+  "started_at": 1775658045.4618056,
+  "updated_at": 1775658194.2309406
+}

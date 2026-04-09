@@ -1,0 +1,8 @@
+{
+  "project": "aurora_l2",
+  "display_name": "Aurora L2",
+  "aliases": ["aurora", "aurora layer 2"],
+  "canonical_urls": [],
+  "source_notes": "Synthetic sample docs for local RAG smoke tests.",
+  "owner": ""
+}

@@ -1,0 +1,11 @@
+{
+  "project": "project_slug",
+  "display_name": "Project Name",
+  "aliases": ["project name", "ticker_or_common_alias"],
+  "canonical_urls": [
+    "https://example.com/docs",
+    "https://example.com/status"
+  ],
+  "source_notes": "Fill this with source freshness notes and any trust assumptions.",
+  "owner": "optional_owner_or_team"
+}

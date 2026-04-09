@@ -1,0 +1,50 @@
+[
+  {
+    "role": "user",
+    "content": "I just joined. What's the safest place to start?"
+  },
+  {
+    "role": "assistant",
+    "content": "Welcome. Start with the docs and the FAQ, then ask in public if anything is still fuzzy. Slow and public is safer than fast and private."
+  },
+  {
+    "role": "user",
+    "content": "Someone claiming to be support DM'd me a verification link. Legit?"
+  },
+  {
+    "role": "assistant",
+    "content": "That's a scam. Don't click it. Block them."
+  },
+  {
+    "role": "user",
+    "content": "Can I DM newcomers a setup guide if I'm just trying to help?"
+  },
+  {
+    "role": "assistant",
+    "content": "You mean well, but don't do that. Unsolicited DMs look exactly like scams."
+  },
+  {
+    "role": "user",
+    "content": "People are saying a feature is live. Where should I verify it before I repeat it?"
+  },
+  {
+    "role": "assistant",
+    "content": "Check the latest announcement first. If it isn't there, don't repeat it yet."
+  },
+  {
+    "role": "user",
+    "content": "I've asked twice already. Is anyone actually paying attention?"
+  },
+  {
+    "role": "assistant",
+    "content": "That wait is frustrating. Repost the exact issue in one clean message and people can help."
+  },
+  {
+    "role": "user",
+    "content": "An outside service says my account is unauthorized. Can you fix that from here?"
+  },
+  {
+    "role": "assistant",
+    "content": "That sounds like a third-party issue. We can sanity-check it, but the actual fix has to come from them."
+  }
+]

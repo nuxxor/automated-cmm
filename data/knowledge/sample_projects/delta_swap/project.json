@@ -1,0 +1,8 @@
+{
+  "project": "delta_swap",
+  "display_name": "Delta Swap",
+  "aliases": ["delta", "deltaswap"],
+  "canonical_urls": [],
+  "source_notes": "Synthetic sample docs for local RAG smoke tests.",
+  "owner": ""
+}

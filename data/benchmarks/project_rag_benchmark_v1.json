@@ -1,0 +1,69 @@
+{
+  "name": "project_rag_benchmark_v1",
+  "description": "Small local retrieval benchmark for project-specific docs, policies, and support facts.",
+  "cases": [
+    {
+      "id": "aurora_bridge_delay_001",
+      "project": "aurora_l2",
+      "query": "A user says their bridge deposit is still pending after a few minutes. What should support check first?",
+      "expected_sources": ["start.md"],
+      "expected_keywords": ["status page", "10 to 30 minutes", "relayer queue"]
+    },
+    {
+      "id": "aurora_dm_scam_002",
+      "project": "aurora_l2",
+      "query": "Someone claiming to be Aurora support asked for my seed phrase in DMs. What do the docs say?",
+      "expected_sources": ["security.md"],
+      "expected_keywords": ["seed phrase", "block them", "ask in public"]
+    },
+    {
+      "id": "aurora_remote_access_003",
+      "project": "aurora_l2",
+      "query": "A helper wants me to install remote access software so they can troubleshoot. Is that legitimate?",
+      "expected_sources": ["security.md"],
+      "expected_keywords": ["remote access", "no legitimate support person", "screen share"]
+    },
+    {
+      "id": "aurora_governance_004",
+      "project": "aurora_l2",
+      "query": "Where should I look first to see whether a governance proposal is live yet?",
+      "expected_sources": ["governance.md"],
+      "expected_keywords": ["governance forum", "snapshot", "discussion period"]
+    },
+    {
+      "id": "delta_apr_005",
+      "project": "delta_swap",
+      "query": "Why does one dashboard show a different APR than another one for Delta Swap?",
+      "expected_sources": ["faq.md"],
+      "expected_keywords": ["gross apr", "net apr", "estimate"]
+    },
+    {
+      "id": "delta_price_006",
+      "project": "delta_swap",
+      "query": "Can support comment on token price or listing rumors?",
+      "expected_sources": ["faq.md", "incidents.md"],
+      "expected_keywords": ["price speculation", "official announcement", "rumors"]
+    },
+    {
+      "id": "delta_partner_bridge_007",
+      "project": "delta_swap",
+      "query": "If a partner bridge is down, who should the user contact?",
+      "expected_sources": ["support.md"],
+      "expected_keywords": ["partner bridge", "contact that service directly", "third-party outage"]
+    },
+    {
+      "id": "delta_clarification_008",
+      "project": "delta_swap",
+      "query": "What exact info should a user include when they ask Delta Swap support for help?",
+      "expected_sources": ["support.md"],
+      "expected_keywords": ["exact steps", "what happened", "what you expected"]
+    },
+    {
+      "id": "delta_incident_009",
+      "project": "delta_swap",
+      "query": "Where should people look for outage or degraded performance updates?",
+      "expected_sources": ["incidents.md"],
+      "expected_keywords": ["status page", "incident update", "latest"]
+    }
+  ]
+}

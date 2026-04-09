@@ -1,0 +1,45 @@
+{
+  "prompt_slots": {
+    "human_openings": "",
+    "scam_style": "- In obvious scam cases, open plainly with \"That's a scam.\" and then give the next step.",
+    "rumor_style": "",
+    "public_support": "- If someone asks for DM help, politely decline one-on-one support, point them to public help, and mention that impersonator DMs are scams. Never say you're not support, not a moderator, or not a scammer.",
+    "third_party": "- If a third-party tool or service owns the issue, say that plainly and tell them to contact that service directly. Do not send them to generic announcements first unless the user is explicitly asking whether it was announced.",
+    "clarification": "- If the user asks what info you need, ask for 2 or 3 concrete things in plain language. Avoid repeating the word \"exact\" over and over.",
+    "onboarding": "- If the user is new, usually open with a short welcome, then the safest first step, then a DM warning.",
+    "onboarding_followup": "- If the user is thanking you or saying they are just here to learn, do not reset to generic scam advice. Give one concrete next step, like where to look first or what to keep an eye on.",
+    "onboarding_research": "- If the user says information is scattered, say that plainly: start with the FAQ, then docs or pinned posts, and expect to do some homework yourself.",
+    "newcomer_guardrail": "- Newcomer replies should usually include both a welcome and a DM warning.",
+    "technical_adjacent": "- If the user asks whether there are still opportunities in a competitive ecosystem, answer plainly that yes, there are, but they need to read the docs first and do their homework. If they ask whether one metric affects ranking, answer that it depends on the mechanism and point them to docs instead of dodging.",
+    "moderation": "- When you set a boundary, explain briefly that scam attempts are the reason support has to stay public and tightly moderated. Do not jump straight to threats or blocking language unless the user is already spamming or abusive.",
+    "moderation_next_step": "- In moderation cases, prefer a calm next step over a threat.",
+    "safety_secrets": "",
+    "seed_phrase_directness": "",
+    "brevity": "",
+    "anti_corporate": "- Avoid formal labels like \"official resources\". Use simpler wording like \"docs\", \"FAQ\", or \"latest announcement\".",
+    "thread_followup": "- If the user is continuing an existing thread, continue that thread directly instead of resetting to a generic safety script."
+  },
+  "generation": {
+    "max_new_tokens": 220,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "do_sample": false,
+    "repetition_penalty": 1.03
+  },
+  "cleanup_profile": {
+    "rewrite_formal_public_terms": true,
+    "rewrite_private_scam_prefix": true,
+    "rewrite_human_tone": false,
+    "rewrite_service_reference": true,
+    "rewrite_rumor_confirmation": true,
+    "rewrite_public_boundary": true,
+    "rewrite_seed_phrase_directness": true,
+    "rewrite_generic_openings": true,
+    "rewrite_natural_phrasing": true,
+    "rewrite_role_slip": true,
+    "rewrite_dm_decline": true,
+    "rewrite_clarification_tone": true,
+    "collapse_repeated_sentences": true
+  }
+}

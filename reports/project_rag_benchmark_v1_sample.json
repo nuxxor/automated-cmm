@@ -1,0 +1,383 @@
+{
+  "config_path": "/home/taygun/Masaüstü/automated-cmm/configs/rag_default.json",
+  "index_path": "/home/taygun/Masaüstü/automated-cmm/data/knowledge_indexes/sample_projects_v1.json",
+  "benchmark_path": "/home/taygun/Masaüstü/automated-cmm/data/benchmarks/project_rag_benchmark_v1.json",
+  "case_count": 9,
+  "top_k": 3,
+  "min_score": 0.0,
+  "score": 90.0,
+  "average_score": 10.0,
+  "pass_rate_at_8": 1.0,
+  "case_results": [
+    {
+      "id": "aurora_bridge_delay_001",
+      "project": "aurora_l2",
+      "query": "A user says their bridge deposit is still pending after a few minutes. What should support check first?",
+      "score": 10.0,
+      "matched_sources": [
+        "start.md"
+      ],
+      "matched_keywords": [
+        "status page",
+        "10 to 30 minutes",
+        "relayer queue"
+      ],
+      "top_hit_source": "aurora_l2/start.md",
+      "hits": [
+        {
+          "id": "aurora_l2-0002",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/start.md",
+          "chunk_index": 0,
+          "score": 6.391827,
+          "text": "# Aurora L2 Quickstart The safest way to get started is to use the official docs, ask questions in public, and avoid unsolicited direct messages. Support is handled in public support threads. Moderators will never DM first to ask for passwords, wallet keys, seed phrases, or remote access. If a bridge deposit is delayed, check the status page first. Normal bridge transfers can take 10 to 30 minutes depending on the destination chain and the relayer queue."
+        },
+        {
+          "id": "aurora_l2-0001",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/security.md",
+          "chunk_index": 0,
+          "score": 1.833518,
+          "text": "# Aurora L2 Security Never share your seed phrase or private key with anyone. No legitimate support person will ask you to install remote access software, join a screen share, or paste a recovery phrase into a form. If someone contacts you in DMs claiming to be support, block them and ask in public instead."
+        },
+        {
+          "id": "aurora_l2-0000",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/governance.md",
+          "chunk_index": 0,
+          "score": 1.202505,
+          "text": "# Aurora L2 Governance Governance proposals are posted to the governance forum before they go onchain for voting. Each proposal has a discussion period before voting opens. If you are looking for the current status of a proposal, start with the governance forum and then check the latest Snapshot vote."
+        }
+      ]
+    },
+    {
+      "id": "aurora_dm_scam_002",
+      "project": "aurora_l2",
+      "query": "Someone claiming to be Aurora support asked for my seed phrase in DMs. What do the docs say?",
+      "score": 10.0,
+      "matched_sources": [
+        "security.md"
+      ],
+      "matched_keywords": [
+        "seed phrase",
+        "block them",
+        "ask in public"
+      ],
+      "top_hit_source": "aurora_l2/security.md",
+      "hits": [
+        {
+          "id": "aurora_l2-0001",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/security.md",
+          "chunk_index": 0,
+          "score": 11.493472,
+          "text": "# Aurora L2 Security Never share your seed phrase or private key with anyone. No legitimate support person will ask you to install remote access software, join a screen share, or paste a recovery phrase into a form. If someone contacts you in DMs claiming to be support, block them and ask in public instead."
+        },
+        {
+          "id": "aurora_l2-0002",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/start.md",
+          "chunk_index": 0,
+          "score": 6.262542,
+          "text": "# Aurora L2 Quickstart The safest way to get started is to use the official docs, ask questions in public, and avoid unsolicited direct messages. Support is handled in public support threads. Moderators will never DM first to ask for passwords, wallet keys, seed phrases, or remote access. If a bridge deposit is delayed, check the status page first. Normal bridge transfers can take 10 to 30 minutes depending on the destination chain and the relayer queue."
+        },
+        {
+          "id": "aurora_l2-0000",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/governance.md",
+          "chunk_index": 0,
+          "score": 2.341762,
+          "text": "# Aurora L2 Governance Governance proposals are posted to the governance forum before they go onchain for voting. Each proposal has a discussion period before voting opens. If you are looking for the current status of a proposal, start with the governance forum and then check the latest Snapshot vote."
+        }
+      ]
+    },
+    {
+      "id": "aurora_remote_access_003",
+      "project": "aurora_l2",
+      "query": "A helper wants me to install remote access software so they can troubleshoot. Is that legitimate?",
+      "score": 10.0,
+      "matched_sources": [
+        "security.md"
+      ],
+      "matched_keywords": [
+        "remote access",
+        "no legitimate support person",
+        "screen share"
+      ],
+      "top_hit_source": "aurora_l2/security.md",
+      "hits": [
+        {
+          "id": "aurora_l2-0001",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/security.md",
+          "chunk_index": 0,
+          "score": 8.496284,
+          "text": "# Aurora L2 Security Never share your seed phrase or private key with anyone. No legitimate support person will ask you to install remote access software, join a screen share, or paste a recovery phrase into a form. If someone contacts you in DMs claiming to be support, block them and ask in public instead."
+        },
+        {
+          "id": "aurora_l2-0002",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/start.md",
+          "chunk_index": 0,
+          "score": 3.854895,
+          "text": "# Aurora L2 Quickstart The safest way to get started is to use the official docs, ask questions in public, and avoid unsolicited direct messages. Support is handled in public support threads. Moderators will never DM first to ask for passwords, wallet keys, seed phrases, or remote access. If a bridge deposit is delayed, check the status page first. Normal bridge transfers can take 10 to 30 minutes depending on the destination chain and the relayer queue."
+        },
+        {
+          "id": "aurora_l2-0000",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/governance.md",
+          "chunk_index": 0,
+          "score": 1.948812,
+          "text": "# Aurora L2 Governance Governance proposals are posted to the governance forum before they go onchain for voting. Each proposal has a discussion period before voting opens. If you are looking for the current status of a proposal, start with the governance forum and then check the latest Snapshot vote."
+        }
+      ]
+    },
+    {
+      "id": "aurora_governance_004",
+      "project": "aurora_l2",
+      "query": "Where should I look first to see whether a governance proposal is live yet?",
+      "score": 10.0,
+      "matched_sources": [
+        "governance.md"
+      ],
+      "matched_keywords": [
+        "governance forum",
+        "snapshot",
+        "discussion period"
+      ],
+      "top_hit_source": "aurora_l2/governance.md",
+      "hits": [
+        {
+          "id": "aurora_l2-0000",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/governance.md",
+          "chunk_index": 0,
+          "score": 6.054829,
+          "text": "# Aurora L2 Governance Governance proposals are posted to the governance forum before they go onchain for voting. Each proposal has a discussion period before voting opens. If you are looking for the current status of a proposal, start with the governance forum and then check the latest Snapshot vote."
+        },
+        {
+          "id": "aurora_l2-0002",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/start.md",
+          "chunk_index": 0,
+          "score": 2.948768,
+          "text": "# Aurora L2 Quickstart The safest way to get started is to use the official docs, ask questions in public, and avoid unsolicited direct messages. Support is handled in public support threads. Moderators will never DM first to ask for passwords, wallet keys, seed phrases, or remote access. If a bridge deposit is delayed, check the status page first. Normal bridge transfers can take 10 to 30 minutes depending on the destination chain and the relayer queue."
+        },
+        {
+          "id": "aurora_l2-0001",
+          "project": "aurora_l2",
+          "source_path": "aurora_l2/security.md",
+          "chunk_index": 0,
+          "score": 1.056172,
+          "text": "# Aurora L2 Security Never share your seed phrase or private key with anyone. No legitimate support person will ask you to install remote access software, join a screen share, or paste a recovery phrase into a form. If someone contacts you in DMs claiming to be support, block them and ask in public instead."
+        }
+      ]
+    },
+    {
+      "id": "delta_apr_005",
+      "project": "delta_swap",
+      "query": "Why does one dashboard show a different APR than another one for Delta Swap?",
+      "score": 10.0,
+      "matched_sources": [
+        "faq.md"
+      ],
+      "matched_keywords": [
+        "gross apr",
+        "net apr",
+        "estimate"
+      ],
+      "top_hit_source": "delta_swap/faq.md",
+      "hits": [
+        {
+          "id": "delta_swap-0000",
+          "project": "delta_swap",
+          "source_path": "delta_swap/faq.md",
+          "chunk_index": 0,
+          "score": 10.257178,
+          "text": "# Delta Swap FAQ Reward APR is an estimate, not a guarantee. It changes as liquidity depth, trading volume, and incentive emissions change. If two dashboards show different numbers, first check whether one is showing gross APR and the other is showing net APR after fees or incentives. Price speculation is not part of support. For factual updates, check the latest official announcement and the product docs."
+        },
+        {
+          "id": "delta_swap-0002",
+          "project": "delta_swap",
+          "source_path": "delta_swap/support.md",
+          "chunk_index": 0,
+          "score": 2.324828,
+          "text": "# Delta Swap Support If the issue is on a partner bridge or a centralized exchange, you need to contact that service directly. Delta Swap support can help you confirm whether the app is degraded, but it cannot fix a third-party outage from inside this community. If you need help, post the exact steps you took, what happened, and what you expected to happen."
+        },
+        {
+          "id": "delta_swap-0001",
+          "project": "delta_swap",
+          "source_path": "delta_swap/incidents.md",
+          "chunk_index": 0,
+          "score": 2.091679,
+          "text": "# Delta Swap Incidents For outages, degraded performance, or indexing delays, check the status page and the latest incident update first. Do not treat listing rumors or launch rumors as confirmed unless they appear in the official announcement channel or the incident page."
+        }
+      ]
+    },
+    {
+      "id": "delta_price_006",
+      "project": "delta_swap",
+      "query": "Can support comment on token price or listing rumors?",
+      "score": 10.0,
+      "matched_sources": [
+        "faq.md",
+        "incidents.md"
+      ],
+      "matched_keywords": [
+        "price speculation",
+        "official announcement",
+        "rumors"
+      ],
+      "top_hit_source": "delta_swap/incidents.md",
+      "hits": [
+        {
+          "id": "delta_swap-0001",
+          "project": "delta_swap",
+          "source_path": "delta_swap/incidents.md",
+          "chunk_index": 0,
+          "score": 4.612994,
+          "text": "# Delta Swap Incidents For outages, degraded performance, or indexing delays, check the status page and the latest incident update first. Do not treat listing rumors or launch rumors as confirmed unless they appear in the official announcement channel or the incident page."
+        },
+        {
+          "id": "delta_swap-0002",
+          "project": "delta_swap",
+          "source_path": "delta_swap/support.md",
+          "chunk_index": 0,
+          "score": 3.18585,
+          "text": "# Delta Swap Support If the issue is on a partner bridge or a centralized exchange, you need to contact that service directly. Delta Swap support can help you confirm whether the app is degraded, but it cannot fix a third-party outage from inside this community. If you need help, post the exact steps you took, what happened, and what you expected to happen."
+        },
+        {
+          "id": "delta_swap-0000",
+          "project": "delta_swap",
+          "source_path": "delta_swap/faq.md",
+          "chunk_index": 0,
+          "score": 1.682122,
+          "text": "# Delta Swap FAQ Reward APR is an estimate, not a guarantee. It changes as liquidity depth, trading volume, and incentive emissions change. If two dashboards show different numbers, first check whether one is showing gross APR and the other is showing net APR after fees or incentives. Price speculation is not part of support. For factual updates, check the latest official announcement and the product docs."
+        }
+      ]
+    },
+    {
+      "id": "delta_partner_bridge_007",
+      "project": "delta_swap",
+      "query": "If a partner bridge is down, who should the user contact?",
+      "score": 10.0,
+      "matched_sources": [
+        "support.md"
+      ],
+      "matched_keywords": [
+        "partner bridge",
+        "contact that service directly",
+        "third-party outage"
+      ],
+      "top_hit_source": "delta_swap/support.md",
+      "hits": [
+        {
+          "id": "delta_swap-0002",
+          "project": "delta_swap",
+          "source_path": "delta_swap/support.md",
+          "chunk_index": 0,
+          "score": 6.057051,
+          "text": "# Delta Swap Support If the issue is on a partner bridge or a centralized exchange, you need to contact that service directly. Delta Swap support can help you confirm whether the app is degraded, but it cannot fix a third-party outage from inside this community. If you need help, post the exact steps you took, what happened, and what you expected to happen."
+        },
+        {
+          "id": "delta_swap-0000",
+          "project": "delta_swap",
+          "source_path": "delta_swap/faq.md",
+          "chunk_index": 0,
+          "score": 2.071816,
+          "text": "# Delta Swap FAQ Reward APR is an estimate, not a guarantee. It changes as liquidity depth, trading volume, and incentive emissions change. If two dashboards show different numbers, first check whether one is showing gross APR and the other is showing net APR after fees or incentives. Price speculation is not part of support. For factual updates, check the latest official announcement and the product docs."
+        },
+        {
+          "id": "delta_swap-0001",
+          "project": "delta_swap",
+          "source_path": "delta_swap/incidents.md",
+          "chunk_index": 0,
+          "score": 0.465115,
+          "text": "# Delta Swap Incidents For outages, degraded performance, or indexing delays, check the status page and the latest incident update first. Do not treat listing rumors or launch rumors as confirmed unless they appear in the official announcement channel or the incident page."
+        }
+      ]
+    },
+    {
+      "id": "delta_clarification_008",
+      "project": "delta_swap",
+      "query": "What exact info should a user include when they ask Delta Swap support for help?",
+      "score": 10.0,
+      "matched_sources": [
+        "support.md"
+      ],
+      "matched_keywords": [
+        "exact steps",
+        "what happened",
+        "what you expected"
+      ],
+      "top_hit_source": "delta_swap/support.md",
+      "hits": [
+        {
+          "id": "delta_swap-0002",
+          "project": "delta_swap",
+          "source_path": "delta_swap/support.md",
+          "chunk_index": 0,
+          "score": 9.068063,
+          "text": "# Delta Swap Support If the issue is on a partner bridge or a centralized exchange, you need to contact that service directly. Delta Swap support can help you confirm whether the app is degraded, but it cannot fix a third-party outage from inside this community. If you need help, post the exact steps you took, what happened, and what you expected to happen."
+        },
+        {
+          "id": "delta_swap-0001",
+          "project": "delta_swap",
+          "source_path": "delta_swap/incidents.md",
+          "chunk_index": 0,
+          "score": 3.269733,
+          "text": "# Delta Swap Incidents For outages, degraded performance, or indexing delays, check the status page and the latest incident update first. Do not treat listing rumors or launch rumors as confirmed unless they appear in the official announcement channel or the incident page."
+        },
+        {
+          "id": "delta_swap-0000",
+          "project": "delta_swap",
+          "source_path": "delta_swap/faq.md",
+          "chunk_index": 0,
+          "score": 1.953739,
+          "text": "# Delta Swap FAQ Reward APR is an estimate, not a guarantee. It changes as liquidity depth, trading volume, and incentive emissions change. If two dashboards show different numbers, first check whether one is showing gross APR and the other is showing net APR after fees or incentives. Price speculation is not part of support. For factual updates, check the latest official announcement and the product docs."
+        }
+      ]
+    },
+    {
+      "id": "delta_incident_009",
+      "project": "delta_swap",
+      "query": "Where should people look for outage or degraded performance updates?",
+      "score": 10.0,
+      "matched_sources": [
+        "incidents.md"
+      ],
+      "matched_keywords": [
+        "status page",
+        "incident update",
+        "latest"
+      ],
+      "top_hit_source": "delta_swap/incidents.md",
+      "hits": [
+        {
+          "id": "delta_swap-0001",
+          "project": "delta_swap",
+          "source_path": "delta_swap/incidents.md",
+          "chunk_index": 0,
+          "score": 3.878297,
+          "text": "# Delta Swap Incidents For outages, degraded performance, or indexing delays, check the status page and the latest incident update first. Do not treat listing rumors or launch rumors as confirmed unless they appear in the official announcement channel or the incident page."
+        },
+        {
+          "id": "delta_swap-0002",
+          "project": "delta_swap",
+          "source_path": "delta_swap/support.md",
+          "chunk_index": 0,
+          "score": 2.713539,
+          "text": "# Delta Swap Support If the issue is on a partner bridge or a centralized exchange, you need to contact that service directly. Delta Swap support can help you confirm whether the app is degraded, but it cannot fix a third-party outage from inside this community. If you need help, post the exact steps you took, what happened, and what you expected to happen."
+        },
+        {
+          "id": "delta_swap-0000",
+          "project": "delta_swap",
+          "source_path": "delta_swap/faq.md",
+          "chunk_index": 0,
+          "score": 2.099282,
+          "text": "# Delta Swap FAQ Reward APR is an estimate, not a guarantee. It changes as liquidity depth, trading volume, and incentive emissions change. If two dashboards show different numbers, first check whether one is showing gross APR and the other is showing net APR after fees or incentives. Price speculation is not part of support. For factual updates, check the latest official announcement and the product docs."
+        }
+      ]
+    }
+  ]
+}

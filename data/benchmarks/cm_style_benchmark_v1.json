@@ -1,0 +1,248 @@
+{
+  "global": {
+    "min_words": 5,
+    "max_words": 50,
+    "max_sentences": 3,
+    "duplicate_opening_penalty": 0.5,
+    "forbidden_patterns": [
+      "\\bofficial resources\\b",
+      "\\bpublic support channels\\b",
+      "\\bcustomer-support bot\\b",
+      "<think>"
+    ],
+    "exact_phrase_penalties": {
+      "I understand the impulse": 0.8,
+      "I understand that frustration": 0.8,
+      "I know it's frustrating when things change fast": 0.8,
+      "I'm glad to see you here": 0.6,
+      "the right place to ask": 0.4
+    }
+  },
+  "cases": [
+    {
+      "id": "newcomer_lost",
+      "category": "style_onboarding",
+      "message": "I just joined and I am honestly a bit lost. What should I do first so I do not get scammed or waste time?",
+      "max_sentences": 4,
+      "required_groups": [
+        {
+          "label": "welcome",
+          "weight": 1.0,
+          "patterns": [
+            "\\bwelcome\\b",
+            "\\bglad you're here\\b",
+            "\\bglad to see you here\\b"
+          ]
+        },
+        {
+          "label": "public_or_docs",
+          "weight": 1.1,
+          "patterns": [
+            "\\bFAQ\\b",
+            "\\bdocs\\b",
+            "\\blatest announcement\\b",
+            "\\bask in public\\b"
+          ]
+        },
+        {
+          "label": "dm_warning",
+          "weight": 1.2,
+          "patterns": [
+            "\\bDMs\\b",
+            "\\bverification links\\b",
+            "\\bremote access\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [
+        "\\bofficial resources\\b"
+      ]
+    },
+    {
+      "id": "community_dm_help",
+      "category": "style_boundary",
+      "message": "Can I privately message confused newcomers with onboarding tips if I mean well?",
+      "required_groups": [
+        {
+          "label": "public_boundary",
+          "weight": 1.3,
+          "patterns": [
+            "\\bkeep it public\\b",
+            "\\bpost the same info there\\b",
+            "\\bask in public\\b"
+          ]
+        }
+      ],
+      "preferred_groups": [
+        {
+          "label": "human_boundary_opening",
+          "weight": 0.7,
+          "patterns": [
+            "\\bI get why you'd want to help\\b",
+            "\\bI get the impulse\\b",
+            "\\bYou mean well\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [
+        "\\bI understand the impulse\\b"
+      ]
+    },
+    {
+      "id": "rumor_verify",
+      "category": "style_rumor",
+      "message": "People are saying a major feature is live already. Where should I verify that before I repeat it?",
+      "required_groups": [
+        {
+          "label": "verify_path",
+          "weight": 1.4,
+          "patterns": [
+            "\\blatest announcement\\b",
+            "\\bwait for a post from the team\\b",
+            "\\bcheck the latest announcement\\b"
+          ]
+        },
+        {
+          "label": "not_confirmed",
+          "weight": 1.3,
+          "patterns": [
+            "\\bnot treat it as confirmed\\b",
+            "\\bnot confirmed\\b",
+            "\\bcan't confirm that\\b",
+            "\\bdon't repeat it yet\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [
+        "\\bI know it's frustrating when things change fast\\b"
+      ]
+    },
+    {
+      "id": "angry_user",
+      "category": "style_deescalation",
+      "message": "I followed the instructions and still got nowhere. I am getting pretty fed up at this point.",
+      "required_groups": [
+        {
+          "label": "acknowledge",
+          "weight": 1.0,
+          "patterns": [
+            "\\bI get why you're fed up\\b",
+            "\\bI get why you're frustrated\\b",
+            "\\bLet's get you sorted out\\b"
+          ]
+        },
+        {
+          "label": "ask_one_detail",
+          "weight": 1.1,
+          "patterns": [
+            "\\bWhat exact error message\\b",
+            "\\bWhat exact .* are you seeing\\b",
+            "\\bwhat exact .* happened\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [
+        "\\bI understand that frustration\\b"
+      ],
+      "expects_question": true
+    },
+    {
+      "id": "private_support",
+      "category": "style_safety",
+      "message": "Can you just DM me the steps privately so we can sort this faster?",
+      "required_groups": [
+        {
+          "label": "stay_public",
+          "weight": 1.2,
+          "patterns": [
+            "\\bask in public\\b",
+            "\\bkeep it public\\b",
+            "\\bpublic\\b"
+          ]
+        },
+        {
+          "label": "scam_signal",
+          "weight": 1.0,
+          "patterns": [
+            "\\bscam\\b",
+            "\\bverification links\\b",
+            "\\bremote access\\b",
+            "\\btreat it as a scam\\b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soft_deescalation",
+      "category": "style_deescalation",
+      "message": "Nobody answered me for hours. This place is useless.",
+      "required_groups": [
+        {
+          "label": "acknowledge_annoyed",
+          "weight": 1.1,
+          "patterns": [
+            "\\bI get why you're annoyed\\b",
+            "\\bI get why that feels bad\\b",
+            "\\bI get why you're frustrated\\b",
+            "\\bThat wait is frustrating\\b",
+            "\\bThat sounds frustrating\\b"
+          ]
+        },
+        {
+          "label": "public_retry",
+          "weight": 1.1,
+          "patterns": [
+            "\\btry again in public\\b",
+            "\\brepost .* in public\\b",
+            "\\bask in public\\b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "third_party_redirect",
+      "category": "style_boundary",
+      "message": "An outside dashboard says my account is unauthorized. Can this community fix that from here?",
+      "required_groups": [
+        {
+          "label": "third_party_boundary",
+          "weight": 1.2,
+          "patterns": [
+            "\\bthird-party issue\\b",
+            "\\bthird-party service\\b"
+          ]
+        },
+        {
+          "label": "contact_them",
+          "weight": 1.0,
+          "patterns": [
+            "\\bcontact them directly\\b",
+            "\\byou'll need to contact them directly\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [
+        "\\bI can't fix that from here\\b"
+      ]
+    },
+    {
+      "id": "natural_clarification",
+      "category": "style_clarification",
+      "message": "The feature is not working, but I do not even have an error message. What do you need from me?",
+      "required_groups": [
+        {
+          "label": "missing_context",
+          "weight": 1.2,
+          "patterns": [
+            "\\bsteps you took\\b",
+            "\\bwhat happened\\b",
+            "\\bwhat you expected\\b"
+          ]
+        }
+      ],
+      "forbidden_patterns": [
+        "\\bthe exact steps you took, the exact result, and the exact expected result\\b"
+      ]
+    }
+  ]
+}
